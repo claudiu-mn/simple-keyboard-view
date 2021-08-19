@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         keyboard.translatesAutoresizingMaskIntoConstraints = false
         keyboard.delegate = self
         keyboard.range = keyRange
+        keyboard.animationDuration = 0.2
         view.addSubview(keyboard)
         
         keyboard.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true

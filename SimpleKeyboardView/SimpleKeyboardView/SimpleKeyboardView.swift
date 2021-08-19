@@ -19,6 +19,8 @@ struct KeyColors {
 class SimpleKeyboardView: UIView {
     weak var delegate: SimpleKeyboardViewDelegate?
     
+    var animationDuration: TimeInterval = 0.2
+    
     var naturalColors: KeyColors = KeyColors(background: .white,
                                                              stroke: .black,
                                                              overlay: .black) {
@@ -53,7 +55,10 @@ class SimpleKeyboardView: UIView {
         didSet {
             isUserInteractionEnabled = enabled
             for key in subviews {
-                key.subviews.first?.alpha = enabled ? 0 : 0.5
+                UIView.animate(withDuration: animationDuration) { [weak self] in
+                    guard let self = self else { return }
+                    key.subviews.first?.alpha = self.enabled ? 0 : 0.5
+                }
             }
         }
     }
@@ -181,9 +186,13 @@ class SimpleKeyboardView: UIView {
             if previousKey != view {
                 hitKeys[touch] = view
                 let index = view.tag //arrangedViews.firstIndex(of: view)!
-                view.subviews.first!.alpha = 0.5
+                UIView.animate(withDuration: animationDuration) {
+                    view.subviews.first!.alpha = 0.5
+                }
                 if let previousKey = previousKey {
-                    previousKey.subviews.first!.alpha = 0
+                    UIView.animate(withDuration: animationDuration) {
+                        previousKey.subviews.first!.alpha = 0
+                    }
                     delegate?.didReleaseKey(at: UInt(previousKey.tag),
                                             in: self)
                 }
@@ -203,9 +212,13 @@ class SimpleKeyboardView: UIView {
             if previousKey != view {
                 hitKeys[touch] = view
                 let index = view.tag// arrangedViews.firstIndex(of: view)!
-                view.subviews.first!.alpha = 0.5
+                UIView.animate(withDuration: animationDuration) {
+                    view.subviews.first!.alpha = 0.5
+                }
                 if let previousKey = previousKey {
-                    previousKey.subviews.first!.alpha = 0
+                    UIView.animate(withDuration: animationDuration) {
+                        previousKey.subviews.first!.alpha = 0
+                    }
                     delegate?.didReleaseKey(at: UInt(previousKey.tag),
                                             in: self)
                 }
@@ -219,9 +232,10 @@ class SimpleKeyboardView: UIView {
         
 //        for touch in touches {
             if let previousKey = hitKeys[touch] {
-                previousKey.subviews.first!.alpha = 0
+                UIView.animate(withDuration: animationDuration) {
+                    previousKey.subviews.first!.alpha = 0
+                }
                 hitKeys.removeValue(forKey: touch)
-                previousKey.subviews.first!.alpha = 0
                 delegate?.didReleaseKey(at: UInt(previousKey.tag),
                                         in: self)
             }
