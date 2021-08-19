@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     @objc private func didTapHomeButton() { dismiss(animated: true) }
 }
 
-extension ViewController: KeyboardViewDelegate {
+extension ViewController: SimpleKeyboardViewDelegate {
     
     func didReleaseKey(at index: UInt, in keyboardView: SimpleKeyboardView) {  }
     

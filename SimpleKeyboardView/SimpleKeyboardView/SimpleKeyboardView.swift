@@ -5,7 +5,7 @@
 
 import UIKit
 
-protocol KeyboardViewDelegate: AnyObject {
+protocol SimpleKeyboardViewDelegate: AnyObject {
     func didPressKey(at index: UInt, in keyboardView: SimpleKeyboardView)
     func didReleaseKey(at index: UInt, in keyboardView: SimpleKeyboardView)
 }
@@ -17,7 +17,7 @@ struct KeyColors {
 }
 
 class SimpleKeyboardView: UIView {
-    weak var delegate: KeyboardViewDelegate?
+    weak var delegate: SimpleKeyboardViewDelegate?
     
     var naturalColors: KeyColors = KeyColors(background: .white,
                                                              stroke: .black,
