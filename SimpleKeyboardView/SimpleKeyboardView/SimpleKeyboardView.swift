@@ -1,13 +1,13 @@
 //
-//  KeyboardView.swift
+//  SimpleKeyboardView.swift
 //
 //  Created by shout@claudiu.mn on 2021.08.16.
 
 import UIKit
 
 protocol KeyboardViewDelegate: AnyObject {
-    func didPressKey(at index: UInt, in keyboardView: KeyboardView)
-    func didReleaseKey(at index: UInt, in keyboardView: KeyboardView)
+    func didPressKey(at index: UInt, in keyboardView: SimpleKeyboardView)
+    func didReleaseKey(at index: UInt, in keyboardView: SimpleKeyboardView)
 }
 
 struct KeyColors {
@@ -16,7 +16,7 @@ struct KeyColors {
     let overlay: UIColor
 }
 
-class KeyboardView: UIView {
+class SimpleKeyboardView: UIView {
     weak var delegate: KeyboardViewDelegate?
     
     var naturalColors: KeyColors = KeyColors(background: .white,

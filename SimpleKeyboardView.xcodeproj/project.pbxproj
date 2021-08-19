@@ -13,7 +13,7 @@
 		B8E2EE2B26CEB33000DBCC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E2EE2A26CEB33000DBCC51 /* Assets.xcassets */; };
 		B8E2EE2E26CEB33000DBCC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E2EE2C26CEB33000DBCC51 /* LaunchScreen.storyboard */; };
 		B8E2EE3C26CEB38A00DBCC51 /* SharpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2EE3626CEB38A00DBCC51 /* SharpView.swift */; };
-		B8E2EE3D26CEB38A00DBCC51 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2EE3726CEB38A00DBCC51 /* KeyboardView.swift */; };
+		B8E2EE3D26CEB38A00DBCC51 /* SimpleKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2EE3726CEB38A00DBCC51 /* SimpleKeyboardView.swift */; };
 		B8E2EE3E26CEB38A00DBCC51 /* GClefNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2EE3826CEB38A00DBCC51 /* GClefNoteView.swift */; };
 		B8E2EE3F26CEB38A00DBCC51 /* MusicTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2EE3926CEB38A00DBCC51 /* MusicTheory.swift */; };
 		B8E2EE4026CEB38A00DBCC51 /* OvalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E2EE3A26CEB38A00DBCC51 /* OvalView.swift */; };
@@ -28,7 +28,7 @@
 		B8E2EE2D26CEB33000DBCC51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8E2EE2F26CEB33000DBCC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8E2EE3626CEB38A00DBCC51 /* SharpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpView.swift; sourceTree = "<group>"; };
-		B8E2EE3726CEB38A00DBCC51 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		B8E2EE3726CEB38A00DBCC51 /* SimpleKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleKeyboardView.swift; sourceTree = "<group>"; };
 		B8E2EE3826CEB38A00DBCC51 /* GClefNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GClefNoteView.swift; sourceTree = "<group>"; };
 		B8E2EE3926CEB38A00DBCC51 /* MusicTheory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTheory.swift; sourceTree = "<group>"; };
 		B8E2EE3A26CEB38A00DBCC51 /* OvalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalView.swift; sourceTree = "<group>"; };
@@ -79,10 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				B8E2EE3826CEB38A00DBCC51 /* GClefNoteView.swift */,
-				B8E2EE3726CEB38A00DBCC51 /* KeyboardView.swift */,
 				B8E2EE3926CEB38A00DBCC51 /* MusicTheory.swift */,
 				B8E2EE3A26CEB38A00DBCC51 /* OvalView.swift */,
 				B8E2EE3626CEB38A00DBCC51 /* SharpView.swift */,
+				B8E2EE3726CEB38A00DBCC51 /* SimpleKeyboardView.swift */,
 			);
 			path = SimpleKeyboardView;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 				B8E2EE2226CEB32E00DBCC51 /* AppDelegate.swift in Sources */,
 				B8E2EE3F26CEB38A00DBCC51 /* MusicTheory.swift in Sources */,
 				B8E2EE3E26CEB38A00DBCC51 /* GClefNoteView.swift in Sources */,
-				B8E2EE3D26CEB38A00DBCC51 /* KeyboardView.swift in Sources */,
+				B8E2EE3D26CEB38A00DBCC51 /* SimpleKeyboardView.swift in Sources */,
 				B8E2EE4026CEB38A00DBCC51 /* OvalView.swift in Sources */,
 				B8E2EE3C26CEB38A00DBCC51 /* SharpView.swift in Sources */,
 			);

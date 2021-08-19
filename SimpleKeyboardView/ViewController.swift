@@ -6,14 +6,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private weak var keyboardView: KeyboardView!
+    private weak var keyboardView: SimpleKeyboardView!
     private weak var noteView: GClefNoteView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let keyRange = NaturalRange(start: .c, length: 9)
-        let keyboard = KeyboardView()
+        let keyboard = SimpleKeyboardView()
         keyboard.translatesAutoresizingMaskIntoConstraints = false
         keyboard.delegate = self
         keyboard.range = keyRange
@@ -68,9 +68,9 @@ class ViewController: UIViewController {
 
 extension ViewController: KeyboardViewDelegate {
     
-    func didReleaseKey(at index: UInt, in keyboardView: KeyboardView) {  }
+    func didReleaseKey(at index: UInt, in keyboardView: SimpleKeyboardView) {  }
     
-    func didPressKey(at index: UInt, in keyboardView: KeyboardView) {
+    func didPressKey(at index: UInt, in keyboardView: SimpleKeyboardView) {
         let diff: UInt = 1 // because note view starts at B3 and keyboard at C4
         let pitch = noteView.startPitch.adding(semitoneCount: index + diff)
         noteView.show(pitch: pitch)
