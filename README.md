@@ -8,7 +8,7 @@
 </div>
 
 
-A Swift color wheel for iOS that focuses on simplicity.
+A Swift piano view for iOS that focuses on simplicity.
 
 Bonus: GClefNoteView with a range from B3 to B5.
 
